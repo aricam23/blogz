@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{{title}}</title>
+    </head>
+
+<body>
+{% if blogs|length == 0 %}
+    <p>No blogs yet</p>
+    {% else %}
+        {% for blog in blogs %}
+            <a href="/?id={{blog.id}}">{{blog.title}}</a><br>
+            {{blog.body}}<br>
+        {% endfor %}
+    {% endif %}<br>
+<a href="/newpost">New Post</a>
+
+</body>
+</html>

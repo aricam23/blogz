@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{{title}}</title>
+    </head>
+<body>
+
+    <h1>Get Blogs Built!</h1>
+    <form method='post'>
+        <label>
+            Blog Title:
+            <input type="text" name='title' />
+            <span class="error">{{title_error}}</span>
+        </label><br>
+        <label>
+            Blog Entry:
+            <textarea name="entry" cols="60" rows="10"></textarea>
+            <span class="error">{{entry_error}}</span>
+        </label>
+        <input type="submit" value='Add Entry' />
+        
+    </form>
+</body>
+</html>
