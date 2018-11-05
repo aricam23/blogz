@@ -1,9 +1,8 @@
-<!doctype html>
-<html>
+{% extends "base.html" %}
+{% block content %}
     <head>
         <title>{{title}}</title>
     </head>
-<body>
 
     <h1>Get Blogs Built!</h1>
     <form method='post'>
@@ -20,5 +19,5 @@
         <input type="submit" value='Add Entry' />
         
     </form>
-</body>
-</html>
+
+{% endblock %}

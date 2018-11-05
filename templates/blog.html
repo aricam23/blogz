@@ -1,5 +1,5 @@
-<!doctype html>
-<html>
+{% extends "base.html" %}
+{% block content %}
     <head>
         <title>{{title}}</title>
     </head>
@@ -9,11 +9,11 @@
     <p>No blogs yet</p>
     {% else %}
         {% for blog in blogs %}
-            <a href="/?id={{blog.id}}">{{blog.title}}</a><br>
-            {{blog.body}}<br>
+        <h2><a href="/blog?={{ blog.id }}">{{ blog.title }}</a></h2>
+        <p>{{blog.body}}</p> 
+        <p>written by <a href="/blog?user={{ blog.owner.username }}">{{ blog.owner.username }}</a>&nbsp;&nbsp;|&nbsp;&nbsp;posted on {{ blog.pub_date.strftime('%b %d, %Y at %I:%M %p')}}</p>
         {% endfor %}
     {% endif %}<br>
 <a href="/newpost">New Post</a>
 
-</body>
-</html>
+{% endblock %}

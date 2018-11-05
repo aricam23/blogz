@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+       {{title}}
+    </head>
+    <body>
+    {% for blog in posts | sort(attribute='id', reverse = True) %}
+    <h2>{{blogs.title}}</h2>
+    <p>{{blogs.body}}</p>
+    <p>Written by <a href='./blog?owner_id={{blogs.owner_id}}'>{{blogs.owner.username}}</a> on: {{blogs.blog_date}}</p>
+    </body>
+</html>
